@@ -1,0 +1,74 @@
+/* CSS */
+body {
+	font-family: sans-serif;
+}
+.nav {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	background: #000;
+	width: 900px;
+	height: 45px;
+	position: relative;
+}
+.nav__el {
+	float: left;
+}
+.nav__el > a {
+	text-decoration: none;
+	color: #FAFAFA;
+	height: 45px;
+	line-height: 45px;
+	display: block;	
+	padding: 0 15px;
+	border-right: 1px solid #555;
+}
+.nav__el > a:hover,
+.nav__el > a:focus,
+.nav__el:hover a{
+	background-color: #1376c9;
+}
+.sousnav {
+	position: absolute;
+	left: 0;
+	top: 45px;
+	background: #1376c9;
+	height: auto;
+}
+.sousnav__el{
+	float: left;
+}
+.sousnav__el a{
+	display: block;
+	padding: 15px;
+	font-size: 12px;
+	color: #F0F0F0;
+	text-decoration: none;
+	position: relative;
+}
+.sousnav__el a:after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 14px;
+	background-color: #FFF;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	margin-top: -7px;
+}
+.sousnav__el:last-child a:after{
+	content: none;
+}
+.sousnav__el a:hover,
+.sousnav__el a:focus{
+	text-decoration: underline;
+}
+.sousnav {
+	opacity: 0;
+	pointer-events: none;
+}
+.nav__el:hover .sousnav{
+	opacity: 1;
+	pointer-events: all;
+}
